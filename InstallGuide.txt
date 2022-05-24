@@ -1,0 +1,6 @@
+Install Node== runtime env to run angular projects.
+node --version
+install angular cli==npm install -g @angular/cli
+for MAC use sudo before
+-g means global
+ng --version 
