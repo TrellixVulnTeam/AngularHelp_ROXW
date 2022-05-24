@@ -4,3 +4,10 @@ It's hard to maintain the code in a larger proj env to properly structure the ap
 Hard to test as well.
 It makes the life of the developer lot easier.
 Q>Architecture??
+
+
+
+Q>cmd+shift+p -- uninstall code then install it to make this work: code .
+Q>code walk??
+main.ts==>
+index.html==>
