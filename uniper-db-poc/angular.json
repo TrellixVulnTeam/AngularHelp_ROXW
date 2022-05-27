@@ -74,7 +74,8 @@
               "browserTarget": "uniper-db-poc:build:production"
             },
             "development": {
-              "browserTarget": "uniper-db-poc:build:development"
+              "browserTarget": "uniper-db-poc:build:development",
+              "proxyConfig": "proxyconfig.json"
             }
           },
           "defaultConfiguration": "development"
