@@ -1,0 +1,26 @@
+Course Structure
+For https://www.youtube.com/watch?v=k5E2AVpwsko&t=1494s
+31:55 TypeScript Fundamentals
+32:34 What is TypeScript?
+34:58 Your First TypeScript Program
+37:57 Declaring Variables
+42:46 Types
+48:29 Type Assertions
+51:15 Arrow Functions
+52:59 Interfaces
+56:54 Classes
+01:01:22 Objects
+01:05:31 Constructors
+01:08:22 Access Modifiers
+01:11:18 Access Modifiers in Constructor Parameters
+01:12:58 Properties
+01:18:15 Modules
+01:23:22 Angular Fundamentals
+01:23:41 Building Blocks of Angular Apps
+01:27:22 Creating Components
+01:37:00 Generating Components Using Angular CLI
+01:41:40 Templates
+01:44:08 Directives
+01:47:34 Services
+01:52:02 Dependency Injection
+01:59:22 Generating Services Using Angular CLI
