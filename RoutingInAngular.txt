@@ -1,0 +1,79 @@
+Generate an aap with routing enabled,
+ng new routing-app --routing --defaults
+
+Create ur component,
+ng generate component first
+
+Import ur components to AppRoutingModule,
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+
+There are three fundamental building blocks to creating a route.
+
+1.Import the AppRoutingModule into AppModule and add it to the imports array.
+Ex,
+import { AppRoutingModule } from './app-routing.module'; // CLI imports AppRoutingModule
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule // CLI adds AppRoutingModule to the AppModule's imports array
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+2.Import RouterModule and Routes into your routing module(AppRoutingModule). Which may be already done if ur created using cli.
+
+3.Define your routes in your Routes array.
+const routes: Routes = [
+  { path: 'first-component', component: FirstComponent },
+  { path: 'second-component', component: SecondComponent },
+];
+4.add your routes to your application.
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>
+    <li><a routerLink="/first-component" routerLinkActive="active">First Component</a></li>
+    <li><a routerLink="/second-component" routerLinkActive="active">Second Component</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
+5.you want to pass information from one component to another.
+To do so, you use the ActivatedRoute interface.
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
+constructor(
+  private route: ActivatedRoute,
+) {}
+
+ngOnInit() {
+  this.route.queryParams.subscribe(params => {
+    this.name = params['name'];
+  });
+}
+
+6.Displaying a 404 page
+const routes: Routes = [
+  { path: 'first-component', component: FirstComponent },
+  { path: 'second-component', component: SecondComponent },
+  { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
+];
+
+7.set up redirects
+const routes: Routes = [
+  { path: 'first-component', component: FirstComponent },
+  { path: 'second-component', component: SecondComponent },
+  { path: '',   redirectTo: '/first-component', pathMatch: 'full' }, // redirect to `first-component`
+  { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
+];
+
+8.Nesting routes
+
+9.

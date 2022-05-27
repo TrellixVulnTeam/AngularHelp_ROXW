@@ -1,0 +1,41 @@
+0.import ReactiveFormsModule inside app.module.ts
+ReactiveFormsModule
+1.making use of the FormBuilder to create a Reactive form.
+import { FormBuilder } from '@angular/forms';
+
+2.Instantiate the FormBuilder module
+constructor(private formBuilder: FormBuilder) { }
+
+3.create a form group which will define the fields in the form.
+ngOnInit() {
+    this.userForm = this.formBuilder.group({
+      firstName: [''],
+      lastName: [''],
+      email: [''],
+      password: [''],
+    });
+  }
+
+4.add the html for above
+<form [formGroup]="userForm" class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">Sign up</p>
+
+    <div class="form-row mb-4">
+        <div class="col">
+            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+        </div>
+    </div>
+
+    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+  
+    <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+
+    <hr>
+
+</form>
+
+5.

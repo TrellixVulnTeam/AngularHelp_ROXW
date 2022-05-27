@@ -11,3 +11,6 @@ Q>cmd+shift+p -- uninstall code then install it to make this work: code .
 Q>code walk??
 main.ts==>
 index.html==>
+
+Q>To start an angular application?
+Ng serve -o/npm start
