@@ -1,17 +1,35 @@
-<form [formGroup]="userForm" class="text-center border border-light p-5">
-
-    <p class="h4 mb-4">Sign up</p>
-
-    <div class="form-row mb-4">
-            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
-            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
-
-    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
-    <input type="number" id="defaultRegisterFormMobileNumber" class="form-control mb-4" placeholder="Mobile Number">
-  
-    <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Password">
-    <button class="btn btn-info my-4 btn-block" type="submit">Sign Up</button>
-    </div>
-    
-
-</form>
+<div>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)">
+        <div>
+          <label>
+            Name:
+            <input formControlName="firstName" placeholder="First name">
+          </label>
+        </div>
+        <div>
+            <label>
+              Name:
+              <input formControlName="lastName" placeholder="Last name">
+            </label>
+          </div>
+        <div>
+          <label>
+            Email:
+            <input type="email" formControlName="email" placeholder="Your email">
+          </label>
+        </div>
+        <div>
+          <label>
+            Message:
+            <input type="number" formControlName="mobileNumber" placeholder="Mobile message">
+          </label>
+        </div>
+        <div>
+            <label>
+              Message:
+              <input type="password" formControlName="password" placeholder="Password">
+            </label>
+          </div>
+        <button type="submit">Sign Up</button>
+      </form>
+</div>

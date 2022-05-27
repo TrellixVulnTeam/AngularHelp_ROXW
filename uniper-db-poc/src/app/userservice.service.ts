@@ -9,11 +9,17 @@ import { User } from './user.model';
   providedIn: 'root'
 })
 export class UserserviceService {
+  
 
   getUsersUrl = baseUrl+'/user';
+  saveUserUrl = baseUrl+'/register'
 
   constructor(private http: HttpClient) { }
   getConfig() {
     return this.http.get<User[]>(this.getUsersUrl);
+  }
+
+  saveUser(user:User) {
+    return this.http.post<User>(this.saveUserUrl,user);
   }
 }

@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ViewusersComponent } from './viewusers/viewusers.component';
+import { ViewdatadynaamicallyComponent } from './viewdatadynaamically/viewdatadynaamically.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    ViewusersComponent
+    ViewusersComponent,
+    ViewdatadynaamicallyComponent
   ],
   imports: [
     BrowserModule,
