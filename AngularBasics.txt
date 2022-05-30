@@ -14,3 +14,5 @@ index.html==>
 
 Q>To start an angular application?
 Ng serve -o/npm start
+
+run *npm install : will update ur project with missing libraries.
