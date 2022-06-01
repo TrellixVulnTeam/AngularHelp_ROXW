@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ViewusersComponent } from './viewusers/viewusers.component';
-import { ViewdatadynaamicallyComponent } from './viewdatadynaamically/viewdatadynaamically.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     RegisterComponent,
     ViewusersComponent,
-    ViewdatadynaamicallyComponent
   ],
   imports: [
     BrowserModule,

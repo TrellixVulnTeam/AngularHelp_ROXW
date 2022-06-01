@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { User } from '../user.model';
+import { Models } from '../Models.component';
+import { ModelPojo } from '../user.model';
 import { UserserviceService } from '../userservice.service';
 
 @Component({
@@ -9,8 +10,7 @@ import { UserserviceService } from '../userservice.service';
   styleUrls: ['./viewusers.component.css']
 })
 export class ViewusersComponent implements OnInit {
-  users: User[] | undefined;
-  dataSource : MatTableDataSource<User> = new MatTableDataSource<User>([]);
+  dataSource : MatTableDataSource<ModelPojo> = new MatTableDataSource<ModelPojo>([]);
   displayedColumns: string[] = ['firstName', 'lastName', 'mobileNumber','email'];
   constructor(private userService:UserserviceService) { }
 
@@ -21,10 +21,9 @@ export class ViewusersComponent implements OnInit {
     console.log("Calling rest call to get all users..");
     
     this.userService.getConfig()
-    .subscribe((data: User[])=>{
+    .subscribe((data: Models)=>{
       console.log(data);
-      this.users = data;
-      this.dataSource = new MatTableDataSource(data);
+      this.dataSource = new MatTableDataSource(data.modelPojoList);
     })  
       
   }

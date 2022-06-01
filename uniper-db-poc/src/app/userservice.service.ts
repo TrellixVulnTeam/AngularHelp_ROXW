@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { baseUrl } from 'src/environments/environment';
-import { User } from './user.model';
+import { Models } from './Models.component';
+import { ModelPojo } from './user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +12,13 @@ import { User } from './user.model';
 export class UserserviceService {
   
 
-  getUsersUrl = baseUrl+'/user';
-  saveUserUrl = baseUrl+'/register'
 
   constructor(private http: HttpClient) { }
   getConfig() {
-    return this.http.get<User[]>(this.getUsersUrl);
+    return this.http.get<Models>(baseUrl);
   }
 
-  saveUser(user:User) {
-    return this.http.post<User>(this.saveUserUrl,user);
+  saveUser(user:ModelPojo) {
+    return this.http.post<ModelPojo>(baseUrl,user);
   }
 }

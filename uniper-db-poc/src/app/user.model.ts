@@ -1,6 +1,6 @@
-export interface User {
+export interface ModelPojo {
     
-  firstName: string;
+      firstName: string;
       lastName: string;
       email: string;
       mobileNumber: number;

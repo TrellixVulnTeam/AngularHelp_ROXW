@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder , FormControl, FormGroup, Validators } from '@angular/forms';
-import { User } from '../user.model';
+import { ModelPojo } from '../user.model';
 import { UserserviceService } from '../userservice.service';
 
 @Component({
@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
     console.log('Valid?', userData.valid); // true or false
     console.log('Value', userData.value);
     this.userService.saveUser(userData.value)
-    .subscribe((data: User)=>{
+    .subscribe((data: ModelPojo)=>{
       console.log(data);
     }) 
  }
