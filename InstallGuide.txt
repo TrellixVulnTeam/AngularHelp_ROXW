@@ -4,3 +4,8 @@ install angular cli==npm install -g @angular/cli
 for MAC use sudo before
 -g means global
 ng --version 
+
+npm install -g npm
+npm install -g --save @angular/material		//use sudo if does not works
+npm install -g --save @angular/material @angular/cdk
+npm install angular-material
