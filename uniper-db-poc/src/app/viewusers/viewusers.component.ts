@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { User } from '../user.model';
 import { UserserviceService } from '../userservice.service';
 
@@ -9,8 +10,8 @@ import { UserserviceService } from '../userservice.service';
 })
 export class ViewusersComponent implements OnInit {
   users: User[] | undefined;
-  dataSource :any;
-  displayedColumns: string[] = ['position', 'firstName', 'lastName', 'mobileNumber','email','na'];
+  dataSource : MatTableDataSource<User> = new MatTableDataSource<User>([]);
+  displayedColumns: string[] = ['firstName', 'lastName', 'mobileNumber','email'];
   constructor(private userService:UserserviceService) { }
 
   ngOnInit(): void {
@@ -23,7 +24,7 @@ export class ViewusersComponent implements OnInit {
     .subscribe((data: User[])=>{
       console.log(data);
       this.users = data;
-      this.dataSource = data;
+      this.dataSource = new MatTableDataSource(data);
     })  
       
   }
