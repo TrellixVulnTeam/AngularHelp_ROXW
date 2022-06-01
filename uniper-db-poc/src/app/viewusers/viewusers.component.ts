@@ -9,7 +9,8 @@ import { UserserviceService } from '../userservice.service';
 })
 export class ViewusersComponent implements OnInit {
   users: User[] | undefined;
-
+  dataSource :any;
+  displayedColumns: string[] = ['position', 'firstName', 'lastName', 'mobileNumber','email','na'];
   constructor(private userService:UserserviceService) { }
 
   ngOnInit(): void {
@@ -22,6 +23,7 @@ export class ViewusersComponent implements OnInit {
     .subscribe((data: User[])=>{
       console.log(data);
       this.users = data;
+      this.dataSource = data;
     })  
       
   }
