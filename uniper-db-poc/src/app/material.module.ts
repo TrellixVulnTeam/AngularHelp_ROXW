@@ -9,7 +9,7 @@ import {MatCardModule}  from '@angular/material/card';
 import {MatMenuModule}  from '@angular/material/menu';
 import {MatIconModule}  from '@angular/material/icon';
 @NgModule({
-  imports: [MatButtonModule, MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule,MatIconModule],
+  imports: [MatButtonModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule,MatIconModule],
   exports: [MatButtonModule, MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule]
 })
 
