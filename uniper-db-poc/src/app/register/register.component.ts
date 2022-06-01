@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder , FormGroup, Validators } from '@angular/forms';
+import { FormBuilder , FormControl, FormGroup, Validators } from '@angular/forms';
 import { User } from '../user.model';
 import { UserserviceService } from '../userservice.service';
 
@@ -10,6 +10,7 @@ import { UserserviceService } from '../userservice.service';
 })
 export class RegisterComponent implements OnInit {
   userForm: FormGroup ;
+  hide = true;
 
   constructor(private formBuilder: FormBuilder,private userService:UserserviceService) {
    }
@@ -31,5 +32,14 @@ export class RegisterComponent implements OnInit {
       console.log(data);
     }) 
  }
+ email = new FormControl('', [Validators.required, Validators.email]);
+
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'You must enter a value';
+    }
+
+    return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
 
 }
