@@ -12,12 +12,12 @@ export class DeleteuserComponent implements OnInit {
   constructor(private route:ActivatedRoute,private userService:UserserviceService) { }
 
   ngOnInit(): void {
-    this.deleteProduct();
+    this.deleteModel();
   }
-  deleteProduct(){
+  deleteModel(){
     let mobileNumber = parseInt(this.route.snapshot.params['id']);
     console.log("inside delete"+mobileNumber);
-    this.userService.deleteUser(mobileNumber)
+    this.userService.deleteModel(mobileNumber)
     .subscribe((data: any) => { 
       console.log(data);
     });
