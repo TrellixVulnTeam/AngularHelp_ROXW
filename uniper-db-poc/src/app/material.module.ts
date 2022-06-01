@@ -8,9 +8,10 @@ import {MatProgressSpinnerModule}  from '@angular/material/progress-spinner';
 import {MatCardModule}  from '@angular/material/card';
 import {MatMenuModule}  from '@angular/material/menu';
 import {MatIconModule}  from '@angular/material/icon';
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
-  imports: [MatButtonModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule,MatIconModule],
-  exports: [MatButtonModule, MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule]
+  imports: [MatButtonModule, MatTabsModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule,MatIconModule],
+  exports: [MatButtonModule, MatTabsModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule]
 })
 
 
