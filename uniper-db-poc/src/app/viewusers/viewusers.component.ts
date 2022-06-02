@@ -13,10 +13,16 @@ import { UserserviceService } from '../userservice.service';
 export class ViewusersComponent implements OnInit {
   dataSource : MatTableDataSource<ModelPojo> = new MatTableDataSource<ModelPojo>([]);
   displayedColumns: string[] = ['firstName', 'lastName', 'mobileNumber','email','delete'];
+  firstName : string = "";
+  value1 : any ;
+  value2 : any ;
   constructor(private userService:UserserviceService , private router:Router) { }
 
   ngOnInit(): void {
     this.showUsers();
+    this.dataSource.filterPredicate = (data: ModelPojo, filter: string) => {
+      return data.firstName == filter;
+     };
   }
   showUsers() {
     console.log("Calling rest call to get all users..");
@@ -31,6 +37,12 @@ export class ViewusersComponent implements OnInit {
   onDelete(user:ModelPojo){
     console.log("Calling rest call to get all users.."+user);
     this.router.navigate(['/deletemodel',user.mobileNumber]);
+  }
+  applyFilter(event: Event) {
+    let filterValue=(event.target as HTMLInputElement).value;
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
   }
 
 }

@@ -11,9 +11,10 @@ import {MatIconModule}  from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table'
 import {MatSelectModule} from '@angular/material/select';
+import { MatSortModule } from '@angular/material/sort';
 @NgModule({
-  imports: [MatTableModule,MatButtonModule,MatSelectModule, MatTabsModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule,MatIconModule],
-  exports: [MatTableModule,MatButtonModule,MatSelectModule, MatTabsModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule]
+  imports: [MatSortModule,MatTableModule,MatButtonModule,MatSelectModule, MatTabsModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule,MatIconModule],
+  exports: [MatSortModule,MatTableModule,MatButtonModule,MatSelectModule, MatTabsModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule]
 })
 
 

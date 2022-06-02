@@ -9,3 +9,8 @@ npm install -g npm
 npm install -g --save @angular/material		//use sudo if does not works
 npm install -g --save @angular/material @angular/cdk
 npm install angular-material
+
+Install Node
+npm install -g @angular/cli
+npm install -g --save @angular/material @angular/cdk
+ng add @angular/material
