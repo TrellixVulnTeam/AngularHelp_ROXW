@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserserviceService } from '../userservice.service';
 
 @Component({
@@ -9,10 +9,11 @@ import { UserserviceService } from '../userservice.service';
 })
 export class DeleteuserComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute,private userService:UserserviceService) { }
-
+  constructor(private route:ActivatedRoute,private userService:UserserviceService, private router:Router) { }
+  longText:string;
   ngOnInit(): void {
-    this.deleteModel();
+    let mobileNumber = parseInt(this.route.snapshot.params['id']);
+    this.longText ="Do you really want to delete this contact"+mobileNumber;
   }
   deleteModel(){
     let mobileNumber = parseInt(this.route.snapshot.params['id']);
@@ -20,7 +21,11 @@ export class DeleteuserComponent implements OnInit {
     this.userService.deleteModel(mobileNumber)
     .subscribe((data: any) => { 
       console.log(data);
+      this.router.navigate(['viewuser-component']);
     });
+  }
+  cancle(){
+    this.router.navigate(['viewuser-component']);
   }
 
 }

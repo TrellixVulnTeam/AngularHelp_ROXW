@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
@@ -10,12 +10,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ViewusersComponent } from './viewusers/viewusers.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     ViewusersComponent,
+    DeleteuserComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
