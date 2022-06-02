@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
@@ -19,6 +20,7 @@ export class ViewusersComponent implements OnInit {
   value2 : any ;
   constructor(private userService:UserserviceService , private router:Router) { }
   @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   ngOnInit(): void {
     this.showUsers();
     this.dataSource.sort=this.sort;
