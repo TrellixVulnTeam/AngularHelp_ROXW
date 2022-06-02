@@ -1,18 +1,13 @@
-  
-<div>
-  <!-- <div class="example-header">
-    <mat-form-field>
-      <input matInput [(ngModel)]="firstName" (ngModelChange)="applyFilter()" placeholder="Filter">
-    </mat-form-field>
-  </div> -->
+  <div>
 
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
   </mat-form-field>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
     <ng-container matColumnDef="firstName">
-      <th mat-header-cell *matHeaderCellDef> First Name </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="sort"> First Name </th>
       <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
     </ng-container>
 
@@ -22,7 +17,7 @@
     </ng-container>
 
     <ng-container matColumnDef="mobileNumber">
-      <th mat-header-cell *matHeaderCellDef> Mobile Number </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile Number </th>
       <td mat-cell *matCellDef="let element"> {{element.mobileNumber}} </td>
     </ng-container>
   

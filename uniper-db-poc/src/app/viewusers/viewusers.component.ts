@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Models } from '../Models.component';
@@ -17,12 +18,10 @@ export class ViewusersComponent implements OnInit {
   value1 : any ;
   value2 : any ;
   constructor(private userService:UserserviceService , private router:Router) { }
-
+  @ViewChild(MatSort) sort: MatSort;
   ngOnInit(): void {
     this.showUsers();
-    this.dataSource.filterPredicate = (data: ModelPojo, filter: string) => {
-      return data.firstName == filter;
-     };
+    this.dataSource.sort=this.sort;
   }
   showUsers() {
     console.log("Calling rest call to get all users..");
