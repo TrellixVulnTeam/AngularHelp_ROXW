@@ -21,9 +21,8 @@ export class ViewusersComponent implements OnInit {
   constructor(private userService:UserserviceService , private router:Router) { }
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  ngOnInit(): void {
+  ngOnInit(): void { 
     this.showUsers();
-    this.dataSource.sort=this.sort;
   }
   showUsers() {
     console.log("Calling rest call to get all users..");
@@ -32,6 +31,8 @@ export class ViewusersComponent implements OnInit {
     .subscribe((data: Models)=>{
       console.log(data);
       this.dataSource = new MatTableDataSource(data.modelPojoList);
+      this.dataSource.sort=this.sort;
+      this.dataSource.paginator=this.paginator;
     })  
       
   }
