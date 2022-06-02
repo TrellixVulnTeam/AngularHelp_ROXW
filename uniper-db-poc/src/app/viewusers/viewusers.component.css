@@ -4,3 +4,7 @@ table {
   input {
     width: 100%;
   }
+  .mat-paginator {
+    display: flex;
+    justify-content: center;
+  }
