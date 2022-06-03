@@ -13,7 +13,7 @@ export class DeleteuserComponent implements OnInit {
   longText:string;
   ngOnInit(): void {
     let mobileNumber = parseInt(this.route.snapshot.params['id']);
-    this.longText ="Do you really want to delete this contact"+mobileNumber;
+    this.longText ="Do you really want to delete this contact "+mobileNumber;
   }
   deleteModel(){
     let mobileNumber = parseInt(this.route.snapshot.params['id']);

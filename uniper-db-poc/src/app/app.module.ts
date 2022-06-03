@@ -11,13 +11,15 @@ import { ViewusersComponent } from './viewusers/viewusers.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { DeleteuserComponent } from './deleteuser/deleteuser.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     ViewusersComponent,
-    DeleteuserComponent
+    DeleteuserComponent,
+    UpdateuserComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ import { UserserviceService } from '../userservice.service';
 })
 export class ViewusersComponent implements OnInit {
   dataSource : MatTableDataSource<ModelPojo> = new MatTableDataSource<ModelPojo>([]);
-  displayedColumns: string[] = ['firstName', 'lastName', 'mobileNumber','email','delete'];
+  displayedColumns: string[] = ['firstName', 'lastName', 'mobileNumber','email','update','delete'];
   firstName : string = "";
   value1 : any ;
   value2 : any ;
@@ -27,7 +27,7 @@ export class ViewusersComponent implements OnInit {
   showUsers() {
     console.log("Calling rest call to get all users..");
     
-    this.userService.getConfig()
+    this.userService.getAllModels()
     .subscribe((data: Models)=>{
       console.log(data);
       this.dataSource = new MatTableDataSource(data.modelPojoList);
@@ -37,8 +37,11 @@ export class ViewusersComponent implements OnInit {
       
   }
   onDelete(user:ModelPojo){
-    console.log("Calling rest call to get all users.."+user);
     this.router.navigate(['/deletemodel',user.mobileNumber]);
+  }
+  onUpdate(user:ModelPojo){
+    console.log("Calling rest call to update.."+user);
+    this.router.navigate(['/updatemodel',user.mobileNumber]);
   }
   applyFilter(event: Event) {
     let filterValue=(event.target as HTMLInputElement).value;

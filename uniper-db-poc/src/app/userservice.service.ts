@@ -13,8 +13,11 @@ export class UserserviceService {
   
   
   constructor(private http: HttpClient) { }
-  getConfig() {
+  getAllModels() {
     return this.http.get<Models>(baseUrl);
+  }
+  getModelBasedOnId(mobileNumber: number){
+    return this.http.get<ModelPojo>(baseUrl+mobileNumber);
   }
 
   saveUser(user:ModelPojo) {
