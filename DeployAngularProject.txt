@@ -1,0 +1,6 @@
+ng build --base-href=/angular/
+
+*will create a dist folder with lesser size.
+*copy this folder and put it in tomcats webapps and rename it to angular as mentioned in the cli call.
+*open url and hit with /angular
+tada....

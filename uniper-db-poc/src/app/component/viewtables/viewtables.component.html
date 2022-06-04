@@ -1,0 +1,31 @@
+<div>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <ng-container matColumnDef="tableName">
+      <th mat-header-cell *matHeaderCellDef> Table Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.tableName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Table Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+
+    <!-- Insert Column -->
+    <ng-container matColumnDef="insertIntoTable">
+      <th mat-header-cell *matHeaderCellDef> Insert </th>
+      <td mat-cell *matCellDef="let element">
+      <button mat-flat-button color="primary" type="button" (click)="onInsertData(element)">insert data</button>
+    </ng-container>
+    <!-- View Column -->
+    <ng-container matColumnDef="showTable">
+      <th mat-header-cell *matHeaderCellDef> Show Table </th>
+      <td mat-cell *matCellDef="let element">
+      <button mat-flat-button color="primary" type="button" (click)="onViewTableData(element)">view table</button>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[2,5,10]" showFirstLastButtons></mat-paginator>
+</div>

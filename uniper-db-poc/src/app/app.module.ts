@@ -5,13 +5,14 @@ import { MaterialModule } from './material.module';
 import { MatSliderModule } from '@angular/material/slider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ViewusersComponent } from './viewusers/viewusers.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { DeleteuserComponent } from './deleteuser/deleteuser.component';
-import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { DeleteuserComponent } from './component/deleteuser/deleteuser.component';
+import { RegisterComponent } from './component/register/register.component';
+import { UpdateuserComponent } from './component/updateuser/updateuser.component';
+import { ViewtablesComponent } from './component/viewtables/viewtables.component';
+import { ViewusersComponent } from './component/viewusers/viewusers.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UpdateuserComponent } from './updateuser/updateuser.component';
     RegisterComponent,
     ViewusersComponent,
     DeleteuserComponent,
-    UpdateuserComponent
+    UpdateuserComponent,
+    ViewtablesComponent
   ],
   imports: [
     BrowserModule,

@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { baseUrl } from 'src/environments/environment';
-import { Models } from './Models.component';
-import { ModelPojo } from './user.model';
+import { Models } from '../model/models.component';
+import { ModelPojo } from '../model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +23,11 @@ export class UserserviceService {
   saveUser(user:ModelPojo) {
     return this.http.post<ModelPojo>(baseUrl,user);
   }
+  updateUser(user:ModelPojo,mobileNumber:number){
+    return this.http.put<ModelPojo>(baseUrl+mobileNumber,user).pipe(catchError(this.handleError));
+  }
   deleteModel(mobileNumber: number) {
-    return this.http.delete(baseUrl+mobileNumber).pipe(catchError(this.handleError));;
+    return this.http.delete(baseUrl+mobileNumber).pipe(catchError(this.handleError));
   }
 
   private handleError(httpError: HttpErrorResponse) {

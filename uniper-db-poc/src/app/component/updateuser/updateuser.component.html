@@ -22,10 +22,6 @@
           <input formControlName="lastName" matInput>
         </mat-form-field><br>
         <mat-form-field appearance="fill">
-          <mat-label>Mobile Number</mat-label>
-          <input formControlName="mobileNumber" matInput>
-        </mat-form-field><br>
-        <mat-form-field appearance="fill">
           <mat-label>Enter your email</mat-label>
           <input formControlName="email" matInput placeholder="pat@example.com" [formControl]="email" required>
           <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>

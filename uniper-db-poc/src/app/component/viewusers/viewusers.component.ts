@@ -3,9 +3,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { Models } from '../Models.component';
-import { ModelPojo } from '../user.model';
-import { UserserviceService } from '../userservice.service';
+import { Models } from 'src/app/model/models.component';
+import { ModelPojo } from 'src/app/model/user.model';
+import { UserserviceService } from 'src/app/service/userservice.service';
 
 @Component({
   selector: 'app-viewusers',

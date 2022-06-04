@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ModelPojo } from '../user.model';
-import { UserserviceService } from '../userservice.service';
+import { ModelPojo } from 'src/app/model/user.model';
+import { UserserviceService } from 'src/app/service/userservice.service';
 
 @Component({
   selector: 'app-updateuser',
@@ -38,14 +38,14 @@ export class UpdateuserComponent implements OnInit {
       this.userForm.controls['firstName'].setValue(data.firstName);
       this.userForm.controls['lastName'].setValue(data.lastName);
       this.userForm.controls['email'].setValue(data.email);
-      this.userForm.controls['mobileNumber'].setValue(data.mobileNumber);
     })  
     
   }
   onSubmit(userData :FormGroup) {
+    let mobileNumber = parseInt(this.route.snapshot.params['id']);
     console.log('Valid?', userData.valid); // true or false
     console.log('Value', userData.value);
-    this.userService.saveUser(userData.value)
+    this.userService.updateUser(userData.value,mobileNumber)
     .subscribe((data: ModelPojo)=>{
       console.log(data);
     }) 
