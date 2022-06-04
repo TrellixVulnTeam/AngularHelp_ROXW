@@ -13,6 +13,9 @@ import { RegisterComponent } from './component/register/register.component';
 import { UpdateuserComponent } from './component/updateuser/updateuser.component';
 import { ViewtablesComponent } from './component/viewtables/viewtables.component';
 import { ViewusersComponent } from './component/viewusers/viewusers.component';
+import { PersoncomponentComponent } from './component/tables/personcomponent/personcomponent.component';
+import { BrokercomponentComponent } from './component/tables/brokercomponent/brokercomponent.component';
+import { LocationcomponentComponent } from './component/tables/locationcomponent/locationcomponent.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ViewusersComponent } from './component/viewusers/viewusers.component';
     ViewusersComponent,
     DeleteuserComponent,
     UpdateuserComponent,
-    ViewtablesComponent
+    ViewtablesComponent,
+    PersoncomponentComponent,
+    BrokercomponentComponent,
+    LocationcomponentComponent
   ],
   imports: [
     BrowserModule,
