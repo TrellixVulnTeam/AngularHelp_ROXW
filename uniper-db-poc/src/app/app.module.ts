@@ -16,6 +16,12 @@ import { ViewusersComponent } from './component/viewusers/viewusers.component';
 import { PersoncomponentComponent } from './component/tables/personcomponent/personcomponent.component';
 import { BrokercomponentComponent } from './component/tables/brokercomponent/brokercomponent.component';
 import { LocationcomponentComponent } from './component/tables/locationcomponent/locationcomponent.component';
+import { ViewcompaniesComponent } from './component/company/viewcompanies/viewcompanies.component';
+import { UpdatecompanyComponent } from './component/company/updatecompany/updatecompany.component';
+import { DeletecompanyComponent } from './component/company/deletecompany/deletecompany.component';
+import { InsertcompanyComponent } from './component/company/insertcompany/insertcompany.component';
+import { ConfigurecardComponent } from './component/company/configurecard/configurecard.component';
+import { InsertsuccesscardComponent } from './component/company/insertsuccesscard/insertsuccesscard.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,13 @@ import { LocationcomponentComponent } from './component/tables/locationcomponent
     ViewtablesComponent,
     PersoncomponentComponent,
     BrokercomponentComponent,
-    LocationcomponentComponent
+    LocationcomponentComponent,
+    ViewcompaniesComponent,
+    UpdatecompanyComponent,
+    DeletecompanyComponent,
+    InsertcompanyComponent,
+    ConfigurecardComponent,
+    InsertsuccesscardComponent
   ],
   imports: [
     BrowserModule,

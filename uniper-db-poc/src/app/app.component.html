@@ -1,7 +1,7 @@
 <p>
   <mat-toolbar color="primary">
     
-    <span>Uniper POC</span>
+    <span>{{title}}</span>
     
   </mat-toolbar>
 </p>
@@ -13,6 +13,7 @@
      routerLinkActive #rla1="routerLinkActive"
      [active]="rla1.isActive">Home
   </a>
+  
 </nav>
 <!-- The routed views render in the <router-outlet>-->
   <router-outlet></router-outlet>

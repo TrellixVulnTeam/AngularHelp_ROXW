@@ -13,9 +13,10 @@ import { MatTableModule } from '@angular/material/table'
 import {MatSelectModule} from '@angular/material/select';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 @NgModule({
-  imports: [MatCardModule,MatPaginatorModule,MatSortModule,MatTableModule,MatButtonModule,MatSelectModule, MatTabsModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule,MatIconModule],
-  exports: [MatCardModule,MatPaginatorModule,MatSortModule,MatTableModule,MatButtonModule,MatSelectModule, MatTabsModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule]
+  imports: [MatButtonToggleModule,MatButtonModule,MatCardModule,MatPaginatorModule,MatSortModule,MatTableModule,MatButtonModule,MatSelectModule, MatTabsModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule,MatIconModule],
+  exports: [MatButtonToggleModule,MatButtonModule,MatCardModule,MatPaginatorModule,MatSortModule,MatTableModule,MatButtonModule,MatSelectModule, MatTabsModule , MatCheckboxModule,MatToolbarModule,MatInputModule,MatProgressSpinnerModule,MatCardModule,MatMenuModule, MatIconModule]
 })
 
 

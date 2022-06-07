@@ -11,23 +11,23 @@ import { ModelPojo } from '../model/user.model';
 })
 export class UserserviceService {
   
-  
+  modelUrl = baseUrl+"/model/";
   constructor(private http: HttpClient) { }
   getAllModels() {
-    return this.http.get<Models>(baseUrl);
+    return this.http.get<Models>(this.modelUrl);
   }
   getModelBasedOnId(mobileNumber: number){
-    return this.http.get<ModelPojo>(baseUrl+mobileNumber);
+    return this.http.get<ModelPojo>(this.modelUrl+mobileNumber);
   }
 
   saveUser(user:ModelPojo) {
-    return this.http.post<ModelPojo>(baseUrl,user);
+    return this.http.post<ModelPojo>(this.modelUrl,user);
   }
   updateUser(user:ModelPojo,mobileNumber:number){
-    return this.http.put<ModelPojo>(baseUrl+mobileNumber,user).pipe(catchError(this.handleError));
+    return this.http.put<ModelPojo>(this.modelUrl+mobileNumber,user).pipe(catchError(this.handleError));
   }
   deleteModel(mobileNumber: number) {
-    return this.http.delete(baseUrl+mobileNumber).pipe(catchError(this.handleError));
+    return this.http.delete(this.modelUrl+mobileNumber).pipe(catchError(this.handleError));
   }
 
   private handleError(httpError: HttpErrorResponse) {

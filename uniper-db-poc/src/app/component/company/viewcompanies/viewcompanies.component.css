@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+  }
+  input {
+    width: 100%;
+  }
+  .mat-paginator {
+    display: flex;
+    justify-content: center;
+  }
+  .example-selected-value {
+    margin: 15px 0;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }

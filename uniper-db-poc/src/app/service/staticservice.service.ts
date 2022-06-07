@@ -5,9 +5,9 @@ import { Tablepojo } from '../model/tablepojo';
   providedIn: 'root'
 })
 export class StaticserviceService {
-  
+  //{'tableName':'Users', 'description':'Users Details'},
   getAllTableasInfo() {
-    let TABLES: Tablepojo[] =[{'tableName':'Users', 'description':'Users Details'},
+    let TABLES: Tablepojo[] =[
                     {'tableName':'Person', 'description':'Person Details'},
                     {'tableName':'Broker​', 'description':'Broker​ Details'},
                     {'tableName':'Company_Alias', 'description':'Company'},
@@ -17,6 +17,9 @@ export class StaticserviceService {
                     {'tableName':'Holiday_Calendar', 'description':'Holiday_Calendar Details'},
                     {'tableName':'Prisma_Product', 'description':'Prisma_Product Details'},];
     return <Tablepojo[]>TABLES;
+  }
+  updateConfigureButton(){
+    
   }
 
   constructor() { }

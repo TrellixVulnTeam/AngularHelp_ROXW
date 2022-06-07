@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'uniper-db-poc';
+  title = 'uniper-ccmapper-poc';
+  hideColumn:string='none';
 }

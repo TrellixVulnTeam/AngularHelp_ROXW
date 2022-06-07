@@ -1,0 +1,64 @@
+<div>
+  <div>
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+  </mat-form-field>
+  <span class="example-spacer"></span>
+    <mat-button-toggle-group #group="matButtonToggleGroup" value="All" title="{{tooltipForConfigureButton}}" (click)="onConfigure()">
+      <mat-button-toggle value="right" aria-label="Text align right">
+        <mat-icon>format_align_right</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  
+      <ng-container matColumnDef="id">
+        <th mat-header-cell [style.display]="" *matHeaderCellDef> ID </th>
+        <td mat-cell [style.display]="" *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="ENTITY_TYPE_NAME">
+        <th mat-header-cell *matHeaderCellDef> ENTITY_TYPE_NAME </th>
+        <td mat-cell *matCellDef="let element"> {{element.entity_TYPE_NAME}} </td>
+      </ng-container>
+      <ng-container matColumnDef="COMPANY_NAME">
+        <th mat-header-cell *matHeaderCellDef> COMPANY_NAME </th>
+        <td mat-cell *matCellDef="let element"> {{element.company_NAME}} </td>
+      </ng-container>
+      <ng-container matColumnDef="DOWNSTREAM_ALIAS">
+        <th mat-header-cell [style.display]="hideColumn" *matHeaderCellDef> DOWNSTREAM_ALIAS </th>
+        <td mat-cell [style.display]="hideColumn" *matCellDef="let element"> {{element.downstream_ALIAS}} </td>
+      </ng-container>
+      <ng-container matColumnDef="DOWNSTREAM_APP">
+        <th mat-header-cell *matHeaderCellDef> DOWNSTREAM_APP </th>
+        <td mat-cell *matCellDef="let element"> {{element.downstream_APP}} </td>
+      </ng-container>
+  
+  
+      <!-- Update Column -->
+      <ng-container matColumnDef="update">
+        <th mat-header-cell *matHeaderCellDef> UPDATE RECORD </th>
+        <td mat-cell *matCellDef="let element">
+        <button mat-flat-button color="primary" type="button" (click)="onUpdate(element)">Update</button>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef> DELETE RECORD </th>
+        <td mat-cell *matCellDef="let element">
+        <button mat-flat-button color="primary" type="button" (click)="onDelete(element)">Delete</button>
+      </ng-container> 
+     <!-- <ng-container matColumnDef="configure">
+        <th mat-header-cell *matHeaderCellDef> <div>
+          <mat-button-toggle-group #group="matButtonToggleGroup"  value="All">
+            <mat-button-toggle value="right" aria-label="Text align right">
+              <mat-icon>format_align_right</mat-icon>
+            </mat-button-toggle>
+          </mat-button-toggle-group>
+          </div>
+        </th>
+      </ng-container> -->      
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[100,200,1000]" showFirstLastButtons></mat-paginator>
+  </div>
+    

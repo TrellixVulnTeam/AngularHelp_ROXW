@@ -1,0 +1,50 @@
+<div>
+  <h2>{{longText}}</h2>
+    <form [formGroup]="companyForm" (ngSubmit)="onSubmit(companyForm)">
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>ALIAS_ID</mat-label>
+          <input formControlName="id" matInput>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>ENTITY_TYPE_NAME</mat-label>
+          <input formControlName="ENTITY_TYPE_NAME" matInput>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>COMPANY_NAME</mat-label>
+          <input formControlName="company_NAME" matInput>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>UPSTREAM_APP</mat-label>
+          <input formControlName="UPSTREAM_APP" matInput>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>UPSTREAM_ALIAS</mat-label>
+          <input formControlName="UPSTREAM_ALIAS" matInput>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>DOWNSTREAM_APP</mat-label>
+          <input formControlName="DOWNSTREAM_APP" matInput>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>DOWNSTREAM_ALIAS</mat-label>
+          <input formControlName="DOWNSTREAM_ALIAS" matInput>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>INSTRUMENT_NAME</mat-label>
+          <input formControlName="INSTRUMENT_NAME" matInput>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>INSTRUMENT_ID</mat-label>
+          <input formControlName="INSTRUMENT_ID" matInput>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>UPDATED_BY</mat-label>
+          <input formControlName="UPDATED_BY" matInput>
+        </mat-form-field><br>
+        
+        <button mat-flat-button color="primary" type="submit">Save</button>
+      </div> 
+    </form>  
+  </div>
+  {{companyForm.value | json}}

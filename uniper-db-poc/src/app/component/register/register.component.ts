@@ -9,7 +9,7 @@ import { UserserviceService } from 'src/app/service/userservice.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  userForm: FormGroup ;
+  userForm: FormGroup;
   hide = true;
 
   constructor(private formBuilder: FormBuilder,private userService:UserserviceService) {
