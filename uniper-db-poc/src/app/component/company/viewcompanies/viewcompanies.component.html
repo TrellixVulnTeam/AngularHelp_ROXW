@@ -11,9 +11,9 @@
     </mat-button-toggle-group>
     <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
   
-      <ng-container matColumnDef="id">
-        <th mat-header-cell [style.display]="" *matHeaderCellDef> ID </th>
-        <td mat-cell [style.display]="" *matCellDef="let element"> {{element.id}} </td>
+      <ng-container matColumnDef="ALIAS_ID">
+        <th mat-header-cell  *matHeaderCellDef> ALIAS_ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
       </ng-container>
       <ng-container matColumnDef="ENTITY_TYPE_NAME">
         <th mat-header-cell *matHeaderCellDef> ENTITY_TYPE_NAME </th>
@@ -24,23 +24,35 @@
         <td mat-cell *matCellDef="let element"> {{element.company_NAME}} </td>
       </ng-container>
       <ng-container matColumnDef="DOWNSTREAM_ALIAS">
-        <th mat-header-cell [style.display]="hideColumn" *matHeaderCellDef> DOWNSTREAM_ALIAS </th>
-        <td mat-cell [style.display]="hideColumn" *matCellDef="let element"> {{element.downstream_ALIAS}} </td>
+        <th mat-header-cell *matHeaderCellDef> DOWNSTREAM_ALIAS </th>
+        <td mat-cell *matCellDef="let element"> {{element.downstream_ALIAS}} </td>
       </ng-container>
+  
       <ng-container matColumnDef="DOWNSTREAM_APP">
         <th mat-header-cell *matHeaderCellDef> DOWNSTREAM_APP </th>
         <td mat-cell *matCellDef="let element"> {{element.downstream_APP}} </td>
       </ng-container>
-  
+      <ng-container matColumnDef="INSTRUMENT_NAME">
+        <th mat-header-cell *matHeaderCellDef> INSTRUMENT_NAME </th>
+        <td mat-cell *matCellDef="let element"> {{element.instrument_NAME}} </td>
+      </ng-container>
+      <ng-container matColumnDef="INSTRUMENT_ID">
+        <th mat-header-cell *matHeaderCellDef> INSTRUMENT_ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.instrument_ID}} </td>
+      </ng-container>
+      <ng-container matColumnDef="UPDATED_BY">
+        <th mat-header-cell *matHeaderCellDef> UPDATED_BY </th>
+        <td mat-cell *matCellDef="let element"> {{element.updated_BY}} </td>
+      </ng-container>
   
       <!-- Update Column -->
-      <ng-container matColumnDef="update">
+      <ng-container matColumnDef="UPDATE">
         <th mat-header-cell *matHeaderCellDef> UPDATE RECORD </th>
         <td mat-cell *matCellDef="let element">
         <button mat-flat-button color="primary" type="button" (click)="onUpdate(element)">Update</button>
       </ng-container>
 
-      <ng-container matColumnDef="delete">
+      <ng-container matColumnDef="DELETE">
         <th mat-header-cell *matHeaderCellDef> DELETE RECORD </th>
         <td mat-cell *matCellDef="let element">
         <button mat-flat-button color="primary" type="button" (click)="onDelete(element)">Delete</button>
@@ -59,6 +71,7 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-    <mat-paginator [pageSizeOptions]="[100,200,1000]" showFirstLastButtons></mat-paginator>
+    <mat-paginator [pageSizeOptions]="[50,200,1000]" showFirstLastButtons></mat-paginator>
   </div>
+  
     

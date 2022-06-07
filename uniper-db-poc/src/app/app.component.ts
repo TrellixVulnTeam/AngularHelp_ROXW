@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'uniper-ccmapper-poc';
+  constructor() {
+    console.log(environment.production); // Logs false for default environment
+  }
   hideColumn:string='none';
 }

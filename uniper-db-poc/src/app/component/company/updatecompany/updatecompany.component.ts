@@ -30,8 +30,14 @@ export class UpdatecompanyComponent implements OnInit {
       updated_BY: [''],
     });
   }
-  onSubmit(companyData:any){
-
+  onUpdate(companyData:FormGroup){
+    let mobileNumber = parseInt(this.route.snapshot.params['id']);
+    console.log("call backend to update : "+companyData.value);
+    this.companyService.updateUser(companyData.value,mobileNumber)
+    .subscribe((data: Company)=>{
+      console.log(data);
+      this.router.navigate(['viewtable/Company_Alias']);
+    })
   }
   updateModel(){
     this.showUpdateCard=false;

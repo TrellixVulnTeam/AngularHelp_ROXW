@@ -22,6 +22,7 @@ import { DeletecompanyComponent } from './component/company/deletecompany/delete
 import { InsertcompanyComponent } from './component/company/insertcompany/insertcompany.component';
 import { ConfigurecardComponent } from './component/company/configurecard/configurecard.component';
 import { InsertsuccesscardComponent } from './component/company/insertsuccesscard/insertsuccesscard.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { InsertsuccesscardComponent } from './component/company/insertsuccesscar
     DeletecompanyComponent,
     InsertcompanyComponent,
     ConfigurecardComponent,
-    InsertsuccesscardComponent
+    InsertsuccesscardComponent,
   ],
   imports: [
     BrowserModule,

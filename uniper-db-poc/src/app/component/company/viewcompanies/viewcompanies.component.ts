@@ -23,7 +23,7 @@ export interface Task {
 export class ViewcompaniesComponent implements OnInit {
 
   dataSource : MatTableDataSource<Company> = new MatTableDataSource<Company>([]);
-  displayedColumns: string[] = ['id','ENTITY_TYPE_NAME','COMPANY_NAME','DOWNSTREAM_ALIAS','DOWNSTREAM_APP','update','delete'];
+  displayedColumns: string[] = ['ALIAS_ID','ENTITY_TYPE_NAME','COMPANY_NAME','DOWNSTREAM_ALIAS','DOWNSTREAM_APP','INSTRUMENT_NAME','INSTRUMENT_ID','UPDATED_BY','UPDATE','DELETE'];
   tooltipForConfigureButton:string='Helps you configure the fields you want to view';
   hideColumn:string = "none";
   @ViewChild(MatSort) sort: MatSort;

@@ -10,8 +10,6 @@ import { Company } from '../model/company';
 })
 export class CompanyserviceService {
   
-  
-  
   companyUrl = baseUrl+"/company/"
   constructor(private http: HttpClient) { }
   getModelBasedOnId(mobileNumber: number) {
@@ -22,6 +20,10 @@ export class CompanyserviceService {
   }
   saveUser(company: Company) {
     return this.http.post<Company>(this.companyUrl,company);
+  }
+  updateUser(company:Company,id:number){
+    console.log("call for rest backend.."+this.companyUrl+id);
+    return this.http.put<Company>(this.companyUrl+id,company).pipe(catchError(this.handleError));
   }
   deleteModel(mobileNumber: number) {
     return this.http.delete(this.companyUrl+mobileNumber).pipe(catchError(this.handleError));

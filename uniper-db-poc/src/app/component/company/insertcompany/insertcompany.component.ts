@@ -17,15 +17,15 @@ export class InsertcompanyComponent implements OnInit {
   ngOnInit(): void {
     this.companyForm= this.formBuilder.group({
       id:[''],
-      ENTITY_TYPE_NAME: [''],
+      entity_TYPE_NAME: [''],
       company_NAME: [''],
-      UPSTREAM_APP: [''],
-      UPSTREAM_ALIAS: [''],
-      DOWNSTREAM_APP: [''],
-      DOWNSTREAM_ALIAS: [''],
-      INSTRUMENT_NAME: [''],
-      INSTRUMENT_ID: [''],
-      UPDATED_BY: [''],
+      upstream_APP: [''],
+      upstream_ALIAS: [''],
+      downstream_APP: [''],
+      downstream_ALIAS: [''],
+      instrument_NAME: [''],
+      instrument_ID: [''],
+      updated_BY: [''],
     });
   }
   onSubmit(companyData:FormGroup){

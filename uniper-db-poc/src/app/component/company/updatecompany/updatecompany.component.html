@@ -14,7 +14,7 @@
         <mat-card class="example-card">
             <mat-card-title>Update Company Details</mat-card-title><br>
             <mat-card-content>
-                <form [formGroup]="companyForm" (ngSubmit)="onSubmit(companyForm)">
+                <form [formGroup]="companyForm" (ngSubmit)="onUpdate(companyForm)">
                     <div class="example-container">
                       <mat-form-field appearance="fill">
                         <mat-label>ENTITY_TYPE_NAME</mat-label>
@@ -52,14 +52,15 @@
                         <mat-label>UPDATED_BY</mat-label>
                         <input formControlName="updated_BY" matInput>
                       </mat-form-field><br>
-                      
+                      <mat-card-actions>
+                        <button mat-flat-button color="primary" type="submit">Update</button>
+                      </mat-card-actions>
                       
                     </div> 
                   </form>
             </mat-card-content>
-            <mat-card-actions>
-              <button mat-flat-button color="primary" type="submit">Update</button>
-            </mat-card-actions>
+            
           </mat-card>
     </div>    
 </ng-template>
+
