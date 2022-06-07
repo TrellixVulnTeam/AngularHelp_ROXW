@@ -9,8 +9,12 @@ import { Company } from '../model/company';
 })
 export class CompanyserviceService {
   
+  
   companyUrl = baseUrl+"/company/"
   constructor(private http: HttpClient) { }
+  getModelBasedOnId(mobileNumber: number) {
+    return this.http.get<Company>(this.companyUrl+mobileNumber);
+  }
   getAllCompanies() {
     return this.http.get<Companies>(this.companyUrl);
   }
