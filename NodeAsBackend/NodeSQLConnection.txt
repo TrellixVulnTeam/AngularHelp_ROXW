@@ -1,0 +1,9 @@
+reference: https://developer.okta.com/blog/2019/03/11/node-sql-server
+create a new folder with description
+run command *npm init -y
+install bellow for smooth operation,
+npm install hapi@18
+npm install mysql
+
+mkdir folderName
+type nul > filename.js

@@ -1,0 +1,14 @@
+Front End vs Backend??
+client(Front End)-->request-->server(backend)-->response-->client(Front End)
+
+Why NodeJS:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+-->now with javascript can run backend application then go for Node js
+
+History::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+-->V8 engine runs Java Script preety well
+-->2009 Someone combined {C++ and V8 Engine} to make Node.exe
+
+Start Programming::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+1.install nodejs
+2.start8 button-->nodejs-->will open a node shell where we can run javascript commands.
+
