@@ -6,6 +6,8 @@ It makes the life of the developer lot easier.
 Q>Architecture??
 
 
+Create a angular project?
+Ng new projName
 
 Q>cmd+shift+p -- uninstall code then install it to make this work: code .
 Q>code walk??

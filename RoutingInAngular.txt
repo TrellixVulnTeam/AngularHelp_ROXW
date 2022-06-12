@@ -4,10 +4,6 @@ ng new routing-app --routing --defaults
 Create ur component,
 ng generate component first
 
-Import ur components to AppRoutingModule,
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
-
 There are three fundamental building blocks to creating a route.
 
 1.Import the AppRoutingModule into AppModule and add it to the imports array.
